@@ -2,6 +2,6 @@
 
 namespace Triplecheck\Common;
 
-class AbstractPlugin
+abstract class AbstractPlugin
 {
 }
