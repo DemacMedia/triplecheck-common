@@ -4,6 +4,7 @@ namespace spec\Triplecheck\Common;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Mockery;
 
 class PluginFactorySpec extends ObjectBehavior
 {
@@ -17,4 +18,9 @@ class PluginFactorySpec extends ObjectBehavior
         $this->all()->shouldBeArray();
     }
 
+    function it_should_create_an_instance_of_dummy_plugin()
+    {
+        $mock = \Mockery::mock('alias:Triplecheck\\Phpcs\\Runner');
+        $this->create('Phpcs')->shouldReturnAnInstanceOf('\\Triplecheck\\Phpcs\\Runner');
+    }
 }

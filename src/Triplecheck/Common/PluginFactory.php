@@ -4,9 +4,10 @@ namespace Triplecheck\Common;
 
 class PluginFactory
 {
+    protected $plugins = array();
 
     public function all()
     {
-        // TODO: write logic here
+        return $this->plugins;
     }
 }
