@@ -11,4 +11,9 @@ class TriplecheckSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Triplecheck\Triplecheck');
     }
+
+    function it_should_return_an_empty_plugin_factory()
+    {
+        $this::getFactory()->shouldReturnAnInstanceOf('Triplecheck\Common\PluginFactory');
+    }
 }
