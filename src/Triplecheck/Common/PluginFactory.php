@@ -10,4 +10,13 @@ class PluginFactory
     {
         return $this->plugins;
     }
+
+    public function create($classname)
+    {
+        if (!class_exists($classname))
+        {
+            throw new \Exception("Class $classname not found");
+        }
+        return new $classname;
+    }
 }

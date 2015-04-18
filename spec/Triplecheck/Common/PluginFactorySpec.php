@@ -21,6 +21,6 @@ class PluginFactorySpec extends ObjectBehavior
     function it_should_create_an_instance_of_dummy_plugin()
     {
         $mock = \Mockery::mock('alias:Triplecheck\\Phpcs\\Runner');
-        $this->create('Phpcs')->shouldReturnAnInstanceOf('\\Triplecheck\\Phpcs\\Runner');
+        $this->create('\\Triplecheck\\Phpcs\\Runner')->shouldReturnAnInstanceOf('\\Triplecheck\\Phpcs\\Runner');
     }
 }
