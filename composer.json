@@ -9,6 +9,10 @@
     "config": {
        "bin-dir": "bin"
      },
+    "autoload": { 
+        "psr-0": { "Triplecheck\\Common\\": "src/" },
+        "classmap": ["src/Triplecheck/Triplecheck.php"]
+    },
     "authors": [
         {
             "name": "Allan MacGregor",
