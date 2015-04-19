@@ -48,4 +48,16 @@ class Triplecheck
 
         return static::$factory;
     }
+
+    /**
+     * __callStatic
+     *
+     * @param mixed $method
+     * @param mixed $parameters
+     */
+    public static function __callStatic($method, $parameters)
+    {
+        $factory = static::getFactory();
+        return call_user_func_array(array($factory, $method), $parameters);
+    }
 }
