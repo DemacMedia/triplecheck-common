@@ -9,11 +9,13 @@ abstract class AbstractPlugin
 {
 
     public $_command;
+    public $_shell;
 
     public $_pluginCode;
 
     public function __construct()
     {
+        $this->_shell   = new Exec();
         $this->_command = new CommandBuilder($this->_pluginCode);
     }
 }
