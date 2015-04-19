@@ -1,14 +1,25 @@
 {
     "name": "amacgregor/triplecheck-common",
+    "require": {
+        "adambrett/shell-wrapper": "*"
+    },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
         "phpunit/phpunit": "~4.6",
+        "mockery/mockery": "0.9.*",
         "behat/behat": "~3.0"
     },
     "type": "library",
     "config": {
        "bin-dir": "bin"
      },
+    "autoload": { 
+        "psr-0": { 
+            "Triplecheck\\Common\\": "src/",
+            "Triplecheck\\Phpcs\\": "../triplecheck-phpcs/src/"
+        },
+        "classmap": ["src/Triplecheck/Triplecheck.php"]
+    },
     "authors": [
         {
             "name": "Allan MacGregor",
