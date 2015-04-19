@@ -17,9 +17,9 @@ class Score
         return $this->score;
     }
 
-    public function addResult($result)
+    public function addResult($score)
     {
-        $this->score += $result['score'];
+        $this->score += $score;
         $this->fileCount++;
         return $this;
     }

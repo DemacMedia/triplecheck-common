@@ -24,7 +24,7 @@ class ScoreSpec extends ObjectBehavior
 
     function it_should_be_able_to_add_a_file_result_to_the_score()
     {
-        $score = [ 'score' => 1, 'file' => 'file/test/test/']; 
+        $score =  1;
         $this->addResult($score)->getScore()->shouldReturn(1);
 
     }
