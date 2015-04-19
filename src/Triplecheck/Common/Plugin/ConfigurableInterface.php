@@ -5,5 +5,5 @@ namespace Triplecheck\Common\Plugin;
 interface ConfigurableInterface
 {
 
-    public function configure();
+    public function configure($options);
 }
