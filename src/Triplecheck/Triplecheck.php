@@ -39,7 +39,7 @@ class Triplecheck
      * getFactory
      *
      */
-    public function getFactory()
+    public static function getFactory()
     {
         if(is_null(static::$factory))
         {

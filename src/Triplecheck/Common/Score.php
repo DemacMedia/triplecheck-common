@@ -20,7 +20,7 @@ class Score
     public function addResult($score)
     {
         $this->score += $score;
-        $this->fileCount++;
+        $this->fileCount += 1;
         return $this;
     }
 }
