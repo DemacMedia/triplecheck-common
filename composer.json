@@ -14,7 +14,10 @@
        "bin-dir": "bin"
      },
     "autoload": { 
-        "psr-0": { "Triplecheck\\Common\\": "src/" },
+        "psr-0": { 
+            "Triplecheck\\Common\\": "src/",
+            "Triplecheck\\Phpcs\\": "../triplecheck-phpcs/src/"
+        },
         "classmap": ["src/Triplecheck/Triplecheck.php"]
     },
     "authors": [

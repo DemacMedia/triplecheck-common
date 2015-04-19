@@ -23,4 +23,16 @@ class PluginFactorySpec extends ObjectBehavior
         $mock = \Mockery::mock('alias:Triplecheck\\Phpcs\\Runner');
         $this->create('\\Triplecheck\\Phpcs\\Runner')->shouldReturnAnInstanceOf('\\Triplecheck\\Phpcs\\Runner');
     }
+
+    function it_should_be_able_to_run_phpcs()
+    {
+        $configurationArray = [ 
+            "argument" => "report=json",
+            "param"    => "tests/SimpleTest.php"
+        ];
+
+        $instance = $this->create('\\Triplecheck\\Phpcs\\Plugin');
+        $instance->shouldReturnAnInstanceOf('\\Triplecheck\\Phpcs\\Plugin');
+        $instance->configure($configurationArray)->run();
+    }
 }
