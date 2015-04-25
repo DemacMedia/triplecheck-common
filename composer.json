@@ -1,7 +1,9 @@
 {
     "name": "amacgregor/triplecheck-common",
     "require": {
-        "adambrett/shell-wrapper": "*"
+        "adambrett/shell-wrapper": "*",
+        "symfony/console": "2.6.*",
+        "symfony/yaml": "2.6.*"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
